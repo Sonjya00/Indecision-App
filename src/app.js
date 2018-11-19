@@ -6,3 +6,27 @@ ReactDOM.render(
   <IndecisionApp options={["Option 1", "Option 2"]} />,
   document.getElementById("app")
 );
+
+// const Layout = props => {
+//   return (
+//     <div>
+//       <p>header</p>
+//       {props.children}
+//       <p>footer</p>
+//     </div>
+//   );
+// };
+
+// const template = (
+//   <div>
+//     <h1>Page Title</h1>
+//     <p>This is my page</p>
+//   </div>
+// );
+
+// ReactDOM.render(
+//   <Layout>
+//     <p>This is inline</p>
+//   </Layout>,
+//   document.getElementById("app")
+// );

@@ -19,9 +19,17 @@ module.exports = {
         loader: "babel-loader",
         // perform test in all js files
         test: /\.js$/,
-        // files to not include in the compiling
+        // files to not include in the compiling, not useful
         exclude: /node_modules/
       }
     ]
+  },
+  // to get source maps. Helpful to see where an error happens
+  // (the devtools points at the line of the original file, not the bundle)
+  devtool: "cheap-module-eval-source-map",
+  // to configure webpack dev server, by providing the path of the public folder
+  // (like we did for live server)
+  devServer: {
+    contentBase: path.join(__dirname, "public")
   }
 };
