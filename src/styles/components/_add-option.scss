@@ -7,6 +7,9 @@
 
 .add-option {
   display: flex;
+  // by default it is row (items stacked left to right)
+  // column --> items are stacked vertically
+  flex-direction: column;
   padding: $m-size;
 }
 
@@ -17,6 +20,15 @@
   color: $off-white;
   // the input takes all the available space
   flex-grow: 1;
-  margin-right: $s-size;
+  margin: 0 0 $s-size 0;
   padding: $s-size;
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .add-option {
+    flex-direction: row;
+  }
+  .add-option__input {
+    margin: 0 $s-size 0 0;
+  }
 }
