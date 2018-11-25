@@ -1,6 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import IndecisionApp from "./components/IndecisionApp";
+// import normalize.css, contained inside of a folder with the same name. Import this first.
+import "normalize.css/normalize.css";
+// import the style, configuration is inside of webpack.config.js
+import "./styles/styles.scss";
 
 ReactDOM.render(
   <IndecisionApp options={["Option 1", "Option 2"]} />,

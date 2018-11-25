@@ -1,0 +1,47 @@
+// target divs that are direct discendent of .ReactModalPortal
+.ReactModalPortal > div {
+  opacity: 0;
+}
+
+.ReactModalPortal .ReactModal__Overlay {
+  display: flex;
+  // display the modal in the horizontal center
+  justify-content: center;
+  // the modal takes up only the space that the content needs
+  align-items: center;
+  transition: 200ms ease-in-out;
+}
+
+// when the modal is open, set the opacity to 1
+// (considering the transition time)
+.ReactModalPortal .ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+// when the modal is open, set the opacity to 0 (+ transition)
+.ReactModalPortal .ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+.modal {
+  // set the background color, or the modal is transparent
+  background: $light-blue;
+  color: #fff;
+  max-width: 30rem;
+  outline: none;
+  padding: $l-size;
+  text-align: center;
+}
+
+.modal__title {
+  margin: 0 0 $m-size 0;
+}
+
+.modal__body {
+  font-size: 2rem;
+  font-weight: 300;
+  margin: 0 0 $l-size 0;
+  // breaks long words into multiple lines,
+  // preventing the user interface to be broken
+  word-break: break-all;
+}

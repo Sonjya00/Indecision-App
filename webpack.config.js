@@ -11,16 +11,27 @@ module.exports = {
     filename: "bundle.js"
   },
   // babel loader will run under specific conditions:
-  // the file must be a JS file and cannot be from node modules
+  // ex, 1st set of rules: the file must be a JS file and cannot be from node modules
   module: {
     rules: [
+      // 1st --> js files
       {
-        // which loader to use
+        // set which loader to use
         loader: "babel-loader",
         // perform test in all js files
         test: /\.js$/,
         // files to not include in the compiling, not useful
         exclude: /node_modules/
+      },
+      // 2nd --> css files
+      {
+        // use allows to add an array of loaders
+        // sass-loader runs node-sass behind the scene
+        use: ["style-loader", "css-loader", "sass-loader"],
+        // perform test in all css files
+        // by adding a ? in front of "s", the "s" becomes optional,
+        // so both .css and .scss files are supported
+        test: /\.s?css$/
       }
     ]
   },

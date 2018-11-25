@@ -12,11 +12,19 @@ const OptionModal = props => (
     isOpen={!!props.selectedOption}
     onRequestClose={props.clearSelectedOption}
     contentLabel="Selected Option"
+    // the time that it takes to be closed (milliseconds)
+    closeTimeoutMS={200}
+    // define a custom class to override the default style of Modal
+    className="modal"
   >
-    <h3>Selected Option</h3>
-    {props.selectedOption && <p>{props.selectedOption}</p>}
+    <h3 className="modal__title">Selected Option</h3>
+    {props.selectedOption && (
+      <p className="modal__body">{props.selectedOption}</p>
+    )}
     {/* to close the modal, clear the selected option */}
-    <button onClick={props.clearSelectedOption}>Okay</button>
+    <button className="button" onClick={props.clearSelectedOption}>
+      Okay
+    </button>
   </Modal>
 );
 

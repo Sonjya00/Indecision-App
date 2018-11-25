@@ -1,0 +1,7 @@
+// allow to center the content in the page
+
+.container {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 0 $m-size;
+}

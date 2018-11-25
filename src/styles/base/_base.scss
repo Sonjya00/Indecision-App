@@ -1,0 +1,21 @@
+// by default, 1rem = 16px
+// so to make it easier to calculate, set html fontsize to 62.5%
+// this means that 1 rem = 10px (16* 0.625 = 10)
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: $m-size;
+  background-color: $dark-blue;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}
